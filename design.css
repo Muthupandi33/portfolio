@@ -458,6 +458,13 @@ ul>li {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+#contact>li>img{
+   
+    margin-left: 10px;
+    width: 140px;
+    height: 140px;
+    margin-top: -50px;
+}
 #contact>li>i{
 
     margin-right: 10px;
