@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Gabriela&family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: #ffff;
+}
+
+.darkModeDisabled {
+    background-color: #ffff;
+    color: black;
+
+}
+
+#menuBar {
+    display: flex;
+    width: inherit;
+    height: 70px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+#menuBar>.logo-block {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, blue);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.darkMode {
+    height: 24px;
+    width: 45px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.darkModeContent {
+    background-color: black;
+}
+
+.darkMode>button {
+    font-size: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
+    display: flex;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+#menuBar>.navigation-block {
+    flex-basis: 60%;
+    height: inherit;
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+
+}
+
+.navigation-block>li>span {
+    text-decoration: none;
+    /* color: rgb(34, 9, 193); */
+    font-weight: 500;
+    font-size: 17px;
+    transition: all 400ms ease;
+}
+
+.navigation-block>li {
+    list-style-type: none;
+
+    margin: 0px 5px 0px 5px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bars {
+    height: inherit;
+    margin: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+}
+
+.barWhite {
+
+    height: 3px;
+    width: 25px;
+    background-color: #ffff;
+    margin: 2px 0px;
+}
+
+.bars {
+    background-color: black;
+}
+
+.changeSun {
+    display: flex;
+    outline: none;
+    position: absolute;
+    left: 20px;
+}
+
+a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.darkText {
+    color: black;
+
+}
+
+li>a:hover {
+    text-decoration: underline;
+    color: #cccc;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.viewOption {
+    display: none;
+}
+
+.barTurn>span:first-child {
+    transform: rotate(45deg) translate(10px, 0.1px);
+}
+
+.barTurn>span:nth-child(2) {
+    opacity: 0;
+}
+
+.barTurn>span:last-child {
+    transform: rotate(-45deg) translate(10px, -0.1px);
+
+}
+
+/* First page body */
+#userDetails {
+    margin-top: 30px;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#userImage {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 70%;
+    height: 10vh;
+    justify-content: center;
+}
+
+#userImage>img {
+    width: 350px;
+    height: 350px;
+    border-radius: 1% 60% 9% 60%;
+    object-fit: center;
+
+}
+
+#userName {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#userName>p {
+
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+}
+
+.nameTag {
+    margin: 7px 0px;
+    font-size: 48px;
+
+    background: #CA4246;
+    background-color: #CA4246;
+    background: conic-gradient(#CA4246 16.666%,
+            #E16541 16.666%,
+            #E16541 33.333%,
+            #F18F43 33.333%,
+            #F18F43 50%,
+            #8B9862 50%,
+            #8B9862 66.666%,
+            #3065d6 66.666%,
+            #2b5ecb 83.333%,
+            #A7489B 83.333%);
+
+    background-size: 57%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.assets {
+    display: flex;
+    margin-top: 20px;
+}
+
+.assets>.connect,
+#gitHubBtn {
+    padding: 10px;
+    width: 120px;
+    background-color: bisque;
+    border: 2px solid rgba(255, 255, 255, 0.526);
+    margin: 10px 15px;
+    border-radius: 50px;
+    outline: none;
+    transition: all 300ms linear;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.connect:hover,
+#gitHubBtn:hover {
+    border: 2px solid rgba(43, 11, 206, 0.562);
+    cursor: pointer;
+}
+
+.fa-github,
+.fa-linkedin-in {
+    margin: 10px 20px 20px 0px;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: rgb(68, 26, 195);
+    background-clip: text;
+    border-radius: 5px;
+    -webkit-text-fill-color: transparent;
+    transition: all 250ms ease-in;
+
+
+
+}
+
+.fa-github:hover,
+.fa-linkedin-in:hover {
+    background-color: red;
+    font-size: 50px;
+
+}
+
+/* Second Page */
+
+.contentPage {
+    margin-top: 10px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+
+.user-image-content {
+
+
+    width: 270px;
+    height: 325px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px 1px;
+    object-fit: cover;
+    position: relative;
+    top: 100px;
+    left: 20px;
+
+}
+
+.aboutText>p,
+.aboutText>h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    font-family: "Langar", system-ui;
+}
+
+#aboutText {
+    text-align: justify;
+    margin: 0px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.aboutBox {
+    height: 150px;
+    width: 300px;
+    margin: 20px 0px 10px 0px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 1px;
+    
+}
+
+.educationBox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 60%;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 50px;
+    background-color: rgba(255, 255, 0, 0.2);
+
+    
+}
+
+.experienceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    margin-left: 100px;
+    background-color: rgba(255, 255, 0, 0.2);
+
+}
+
+.fa-solid {
+    margin-top: 10px;
+}
+
+.aboutMe>p {
+    margin: 30px 50px 0px 50px;
+    text-align: justify;
+    font-size: 20px;
+    
+}
+
+.experienceBox>p,
+.educationBox>p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Roboto Slab", serif;
+}
+
+#exp-head,
+#project>h2, #footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Langar", system-ui;
+}
+
+#exp-head>h1,
+#project>h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+#skillsAndExperience {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.experience,
+.skills {
+    width: 100%;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px #ccc;
+    background-color: rgba(255, 255, 0, 0.2);
+
+}
+
+.experience>h2,
+.skills>h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.experience>h3,
+.skills>h3 {
+    margin-left: 30px;
+}
+
+ul>li {
+    list-style: none;
+    margin: 15px 0px 0px 40px;
+}
+
+.skills>ul>li>i {
+    font-size: 25px;
+    margin-right: 40px;
+
+}
+
+.skillKnowledge {
+    margin: 15px 0px 15px 60px;
+    text-indent: 50px;
+}
+
+#project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: rgba(255, 255, 0, 0.2);
+}
+
+#project>p {
+    margin: 15px 100px 10px;
+    text-align: justify;
+}
+#footer{
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: rgba(255, 255, 0, 0.2);
+}
+#footer>p{
+    text-align: center;
+}
+
+#contact{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+   
+}
+.contact{
+    color: #2b5ecb;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#contact>li>i{
+
+    margin-right: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+}
+#rights{
+    text-align: center;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+
+}
