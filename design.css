@@ -479,3 +479,50 @@ ul>li {
     margin: 20px;
 
 }
+
+/* Base styles for all devices */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    color: #ffff;
+}
+
+#menuBar {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+#menuBar>.logo-block {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem; /* Use rem for scalability */
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, blue);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#menuBar>.navigation-block {
+    flex-basis: 60%;
+    height: 100%;
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+}
+
+.navigation-block>li>span {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem; /* Use rem for scalability */
+    transition: all 400ms ease;
+}

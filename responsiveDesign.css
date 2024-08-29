@@ -1,27 +1,91 @@
 
 
-@media screen and (max-width: 800px) {
-    .showOption{
-        height: 200px;
-        width: 250px;
-        background-color: transparent;
-        box-shadow: 0px 0px 15px 1px;
-        position: absolute;
-        display: block;
-        right: 1px;
-        top:72px
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #menuBar {
+        flex-direction: column;
+        height: auto;
     }
     
-#bars{
-    display: block;
-    /* margin: 0px 10px 0px 5px; */
-    height: inherit;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    #menuBar>.logo-block {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    
+    #menuBar>.navigation-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-block>li {
+        margin: 10px 0;
+    }
+
+    #userDetails {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #userImage>img {
+        width: 80%;
+        height: auto;
+        border-radius: 10%;
+    }
+    
+    #userName>p {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    
+    .assets {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .asset-button {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
-.navigation-block>li>a{
-    display: none;
+
+/* Tablet and Laptop Styles */
+@media (min-width: 769px) and (max-width: 1200px) {
+    #menuBar>.logo-block {
+        font-size: 1.75rem; /* Adjust font size for medium screens */
+    }
+    
+    #userImage>img {
+        width: 50%;
+        height: auto;
+        border-radius: 20%;
+    }
+    
+    #userName>p {
+        font-size: 1.75rem; /* Adjust font size for medium screens */
+    }
+    
+    .assets {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
+
+/* Desktop Styles */
+@media (min-width: 1201px) {
+    #menuBar>.logo-block {
+        font-size: 2rem; /* Default font size */
+    }
+    
+    #userImage>img {
+        width: 350px;
+        height: 350px;
+    }
+    
+    #userName>p {
+        font-size: 2rem; /* Default font size */
+    }
+    
+    .assets {
+        flex-direction: row;
+    }
 }
+
